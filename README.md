@@ -74,8 +74,8 @@ npm install
 REACT_APP_API_BASE_URL=https://f8lzov2sb3.execute-api.us-east-1.amazonaws.com
 REACT_APP_API_OPERATION_ENDPOINT=/operation
 REACT_APP_API_UPDATE_BALANCE_ENDPOINT=/update-balance
-````
-``
+```
+
 5. Start the development server:
 ```bash
 npm start
