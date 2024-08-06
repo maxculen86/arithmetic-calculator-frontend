@@ -47,7 +47,7 @@ utils/
 pages/
 styles/
 ```
-```
+
 ## Getting Started
 
 ### Prerequisites
@@ -70,7 +70,12 @@ npm install
 ```
 
 4. Create a `.env` file in the root directory and add the necessary environment variables:
-REACT_APP_API_BASE_URL=your_api_base_url
+```bash
+REACT_APP_API_BASE_URL=https://f8lzov2sb3.execute-api.us-east-1.amazonaws.com
+REACT_APP_API_OPERATION_ENDPOINT=/operation
+REACT_APP_API_UPDATE_BALANCE_ENDPOINT=/update-balance
+````
+``
 5. Start the development server:
 ```bash
 npm start
