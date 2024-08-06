@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { addBalance } from '../api/operations';
+import { addBalance } from '../api/v1/operations';
 
 interface UseAddBalanceFormProps {
   userId: string;

@@ -1,6 +1,6 @@
 import axiosInstance from './axiosInstance';
 import { API_ENDPOINTS } from './config';
-import { FetchRecordsParams, DeleteRecordParams, FetchRecordsResponse } from '../types/apiTypes';
+import { FetchRecordsParams, DeleteRecordParams, FetchRecordsResponse } from '../../types/apiTypes';
 
 /**
  * Fetches records based on the provided parameters.

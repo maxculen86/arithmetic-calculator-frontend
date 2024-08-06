@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import { AuthUser } from '@aws-amplify/auth';
-import { fetchRecords } from '../api/records';
+import { fetchRecords } from '../api/v1/records';
 import { FilterProps, Operation } from '../types/userRecordsTypes';
 import { operationTypeMap } from '../constants/operationTypes';
 

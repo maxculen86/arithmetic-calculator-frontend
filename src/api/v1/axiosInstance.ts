@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { API_BASE_URL } from './config';
-import { getAuthToken } from '../utils/auth';
+import { getAuthToken } from '../../utils/auth';
 
 /**
  * Axios instance for making HTTP requests.

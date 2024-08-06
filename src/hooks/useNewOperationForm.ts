@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { SelectChangeEvent } from '@mui/material';
 import { OperationType, OperationData } from '../types/operationTypes';
-import { createOperation } from '../api/operations';
+import { createOperation } from '../api/v1/operations';
 
 /**
  * Custom hook for managing a new operation form.

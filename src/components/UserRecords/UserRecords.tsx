@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Box, Typography } from '@mui/material';
 import { useAuthenticator } from '@aws-amplify/ui-react';
-import { deleteRecord } from '../../api/records';
+import { deleteRecord } from '../../api/v1/records';
 import FilterSection from '../Filter/FilterSection';
 import SearchBar from '../SearchBar/SearchBar';
 import RecordsTable from '../Table/RecordsTable';

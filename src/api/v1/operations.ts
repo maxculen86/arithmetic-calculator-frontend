@@ -1,7 +1,7 @@
 import axiosInstance from './axiosInstance';
 import { API_ENDPOINTS } from './config';
-import { OperationData } from '../types/operationTypes';
-import { OperationResponse, UpdateBalanceRequest, UpdateBalanceResponse } from '../types/apiTypes';
+import { OperationData } from '../../types/operationTypes';
+import { OperationResponse, UpdateBalanceRequest, UpdateBalanceResponse } from '../../types/apiTypes';
 
 /**
  * Creates a new operation.
