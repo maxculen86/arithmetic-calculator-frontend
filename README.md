@@ -178,17 +178,3 @@ To monitor deployments or configure settings:
 1. Go to the [AWS Amplify Console](https://console.aws.amazon.com/amplify/)
 2. Select your app
 3. View deployment status, logs, and configure settings as needed
-
-Remember to manage your AWS credentials securely and never commit them to your repository.
-
-## Contributing
-
-[Add guidelines for contributing to the project, if applicable]
-
-## License
-
-[Add license information]
-
-## Contact
-
-[Add your contact information or link to your GitHub profile]
