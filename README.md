@@ -89,7 +89,8 @@ The Arithmetic Calculator application allows users to perform various arithmetic
 
 ### Accessing the Application
 
-1. Open your web browser and navigate to [https://main.d3a8zax3e8h5c7.amplifyapp.com/login](https://main.d3a8zax3e8h5c7.amplifyapp.com/login)
+1. You can access the live version of this application at:
+[https://arithmetic-calculator-challenge.netlify.app/](https://arithmetic-calculator-challenge.netlify.app/)
 
 ### Authentication
 
@@ -141,40 +142,38 @@ This frontend application integrates with a backend API. The base URL for the AP
 
 ## Deployment
 
-This application is automatically deployed to AWS Amplify when changes are pushed to the main branch of the GitHub repository. Here's an overview of the deployment process:
+This application is automatically deployed to Netlify when changes are pushed to the main branch of the GitHub repository. Here's an overview of the deployment process:
 
 1. **GitHub Integration**: 
-   The project repository is connected to AWS Amplify. Any push to the main branch triggers a new build and deployment.
+  The project repository is connected to Netlify. Any push to the main branch triggers a new build and deployment.
 
 2. **Build Process**:
-   When a new commit is pushed, AWS Amplify automatically:
-   - Pulls the latest code from the GitHub repository
-   - Installs dependencies (`npm install` or `yarn install`)
-   - Builds the application (`npm run build` or `yarn build`)
+  - Pulls the latest code from the GitHub repository
+  - Installs dependencies (npm install)
+  - Builds the application (npm run build)
 
 3. **Environment Variables**:
-   Sensitive information and configuration variables are stored as environment variables in the AWS Amplify Console, not in the codebase.
+   Sensitive information and configuration variables are stored as environment variables in the Netlify dashboard, not in the codebase.
 
 4. **Deployment**:
-   After a successful build, Amplify deploys the built assets to a global CDN, ensuring fast access from anywhere in the world.
-
+  The application is served over HTTPS on a domain provided by Netlify. A custom domain can be configured if needed.
+  
 5. **Domain and HTTPS**:
    The application is served over HTTPS on a domain provided by AWS Amplify. A custom domain can be configured if needed.
 
 6. **Continuous Deployment**:
-   Every push to the main branch triggers this process, ensuring that the live version is always up-to-date with the latest code.
+  Every push to the main branch triggers this process, ensuring that the live version is always up-to-date with the latest code.
 
 To deploy manually or set up the Amplify deployment for the first time:
 
-1. Install the Amplify CLI: `npm install -g @aws-amplify/cli`
-2. Configure the Amplify CLI: `amplify configure`
-3. Initialize Amplify in your project: `amplify init`
-4. Add hosting: `amplify add hosting`
-5. Publish the app: `amplify publish`
+1. Create a Netlify account and connect it to your GitHub repository.
+2. Set up your build settings in the Netlify dashboard.
+3. Add necessary environment variables in the Netlify dashboard.
 
-For more detailed control over the build and deployment process, you can add an `amplify.yml` file to your project root with custom build settings.
+For more detailed control over the build and deployment process, you can add a netlify.toml file to your project root with custom build settings.
 
 To monitor deployments or configure settings:
-1. Go to the [AWS Amplify Console](https://console.aws.amazon.com/amplify/)
+
+1. Go to the Netlify dashboard
 2. Select your app
 3. View deployment status, logs, and configure settings as needed
