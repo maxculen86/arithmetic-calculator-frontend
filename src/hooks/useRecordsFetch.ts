@@ -4,6 +4,12 @@ import { fetchRecords } from '../api/v1/records';
 import { FilterProps, Operation } from '../types/userRecordsTypes';
 import { operationTypeMap } from '../constants/operationTypes';
 
+/**
+ * Custom hook for fetching records.
+ *
+ * @param user - The authenticated user.
+ * @returns An object containing the fetched records and a function to fetch operations.
+ */
 export const useRecordsFetch = (user: AuthUser | undefined) => {
   const [state, setState] = useState({
     operations: [] as Operation[],

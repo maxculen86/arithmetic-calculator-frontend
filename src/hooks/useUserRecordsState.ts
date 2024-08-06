@@ -2,6 +2,10 @@ import { useState, useMemo } from 'react';
 import { debounce } from 'lodash';
 import { FilterProps } from '../types/userRecordsTypes';
 
+/**
+ * Custom hook for managing user records state.
+ * @returns An object containing the state variables and functions for managing user records.
+ */
 export const useUserRecordsState = () => {
   const [page, setPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(10);

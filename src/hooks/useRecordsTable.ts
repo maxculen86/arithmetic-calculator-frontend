@@ -1,6 +1,16 @@
 import { useMemo } from 'react';
 import { Operation } from '../types/userRecordsTypes';
 
+/**
+ * Custom hook for managing the records table.
+ *
+ * @param operations - The list of operations to display in the table.
+ * @param loading - A boolean indicating whether the table is currently loading.
+ * @param sortBy - The column ID to sort the table by.
+ * @param sortOrder - The sort order ('asc' or 'desc') for the table.
+ * @param onSort - A callback function to handle sorting the table.
+ * @returns An object containing the columns configuration, a renderSortLabel function, and a flag indicating whether to show the table.
+ */
 export const useRecordsTable = (
   operations: Operation[],
   loading: boolean,

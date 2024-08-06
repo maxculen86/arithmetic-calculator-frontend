@@ -1,6 +1,12 @@
 import { useState } from 'react';
 import { FilterProps } from '../types/userRecordsTypes';
 
+/**
+ * Custom hook for managing filter state.
+ *
+ * @param initialFilter - The initial filter object.
+ * @returns An object containing the filter state and helper functions.
+ */
 export const useFilter = (initialFilter: FilterProps) => {
   const [filter, setFilter] = useState<FilterProps>(initialFilter);
 
@@ -21,4 +27,4 @@ export const useFilter = (initialFilter: FilterProps) => {
     handleFilterChange,
     updateDateFilter,
   };
-};  
+};
