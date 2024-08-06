@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextField, Button, Box } from '@mui/material';
+import { TextField, Button } from '@mui/material';
 
 interface AddBalanceFormProps {
   amount: number | '';

@@ -26,7 +26,7 @@ export const useAddBalanceForm = ({ userId, onSuccess }: UseAddBalanceFormProps)
     }
 
     try {
-      const response = await addBalance(userId, amount);
+      await addBalance(userId, amount);
       setError(null);
       setAmount('');
       onSuccess();
