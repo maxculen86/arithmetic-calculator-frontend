@@ -16,7 +16,6 @@ import RecordsPage from './pages/RecordsPage';
 Amplify.configure(awsconfig);
 
 const App: React.FC = () => {
-  console.log('Custom theme:', baseTheme); 
   return (
     <ThemeProvider theme={baseTheme}>
       <CssBaseline />

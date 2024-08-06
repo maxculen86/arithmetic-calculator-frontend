@@ -26,13 +26,11 @@ export const useRecordsFetch = (user: AuthUser | undefined) => {
   ) => {
     if (!user) return;
 
-    console.log('fetchOperations:', currentPage, currentRowsPerPage, currentFilter, currentSearchString);
     try {
       const operationId = currentFilter.operationType
         ? Object.keys(operationTypeMap).find(key => operationTypeMap[key] === currentFilter.operationType)
         : undefined;
 
-      console.log('operationId:', operationId);
       const response = await fetchRecords({
         userId: user.userId,
         operationId: operationId ? operationId : undefined,
@@ -44,7 +42,6 @@ export const useRecordsFetch = (user: AuthUser | undefined) => {
         sortOrder: currentFilter.sortOrder || 'desc',
         searchString: currentSearchString || undefined
       });
-      console.log('fetchOperations response:', response);
       setState({
         operations: response.items || [],
         loading: false,

@@ -27,7 +27,6 @@ export const useUserRecordsState = () => {
   };
 
   const handleFilterChange = (newFilter: FilterProps) => {
-    console.log('handleFilterChange:', newFilter);
     setFilter(newFilter);
     setPage(1);
   };
