@@ -71,7 +71,7 @@ npm install
 
 4. Create a `.env` file in the root directory and add the necessary environment variables:
 ```bash
-REACT_APP_API_BASE_URL=https://f8lzov2sb3.execute-api.us-east-1.amazonaws.com
+REACT_APP_API_BASE_URL=https://f8lzov2sb3.execute-api.us-east-1.amazonaws.com/v1
 REACT_APP_API_OPERATION_ENDPOINT=/operation
 REACT_APP_API_UPDATE_BALANCE_ENDPOINT=/update-balance
 ```
