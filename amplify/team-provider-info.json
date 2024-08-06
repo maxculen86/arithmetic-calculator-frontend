@@ -1,0 +1,21 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-arithmeticcalculator-dev-093cb-authRole",
+      "UnauthRoleArn": "arn:aws:iam::010438485555:role/amplify-arithmeticcalculator-dev-093cb-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::010438485555:role/amplify-arithmeticcalculator-dev-093cb-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-arithmeticcalculator-dev-093cb-deployment",
+      "UnauthRoleName": "amplify-arithmeticcalculator-dev-093cb-unauthRole",
+      "StackName": "amplify-arithmeticcalculator-dev-093cb",
+      "StackId": "arn:aws:cloudformation:us-east-1:010438485555:stack/amplify-arithmeticcalculator-dev-093cb/71b5f190-4dea-11ef-a4a7-0e50906fdf29",
+      "AmplifyAppId": "d2u71almq5v2eo"
+    },
+    "categories": {
+      "auth": {
+        "arithmeticcalculator3be5499e": {},
+        "arithmeticcalculator1b6f88ba": {}
+      }
+    }
+  }
+}

@@ -1,26 +1,56 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Authenticator, View, ThemeProvider as AmplifyThemeProvider } from '@aws-amplify/ui-react';
+import CssBaseline from '@mui/material/CssBaseline';
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import Layout from './components/Layout/Layout';
+import { Amplify } from 'aws-amplify';
+import '@aws-amplify/ui-react/styles.css';
+import awsconfig from './aws-exports';
+import ProtectedRoute from './components/Route/ProtectedRoute';
+import baseTheme, { amplifyTheme } from './styles/themes';
+import { ThemeProvider } from '@mui/material';
+import RecordsPage from './pages/RecordsPage';
 
-function App() {
+Amplify.configure(awsconfig);
+
+const App: React.FC = () => {
+  console.log('Custom theme:', baseTheme); 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={baseTheme}>
+      <CssBaseline />
+      <AmplifyThemeProvider theme={amplifyTheme}>
+        <Authenticator.Provider>
+          <Router>
+            <Layout>
+              <View>
+                <Routes>
+                  <Route path="/login" element={<LoginPage />} />
+                  <Route 
+                    path="/" 
+                    element={
+                      <ProtectedRoute>
+                        <HomePage />
+                      </ProtectedRoute>
+                    } 
+                  />
+                  <Route 
+                    path="/records" 
+                    element={
+                      <ProtectedRoute>
+                        <RecordsPage />
+                      </ProtectedRoute>
+                    } 
+                  />
+                </Routes>
+              </View>
+            </Layout>
+          </Router>
+        </Authenticator.Provider>
+      </AmplifyThemeProvider>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
